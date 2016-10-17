@@ -1,8 +1,9 @@
 body{
-	width: 994px;
 	align-items: center;
 	background:url(elements2/bg.png);
 	margin: 3%;
+	display: flex;
+	justify-content: center;
 }
 .corps{
 	width: 100%;
@@ -10,6 +11,7 @@ body{
 	background-color:white;
 	justify-content: center;
 	display: flex;
+	width: 994px;
 }
 .main{
 	width: 900px;
@@ -46,19 +48,6 @@ h1{
 	opacity: 0.8;
 }
 
-ul{
-	display: flex;
-	flex-direction: row;
-	list-style-type: none;
-	align-items: center;
-	justify-content: center;
-	margin-top:0;
-	height: 59px;
-	background-color:#FCFDFD;
-	border-top: 1px solid rgba(5, 0, 0, .2);
-	border-bottom: 1px solid rgba(5, 0, 0, .2);
-	margin-top: 25px;
-}
 ul li a{
 	text-decoration: none;
 	color:#505050;
@@ -66,6 +55,59 @@ ul li a{
 ul li{
 	margin: 2%;
 }
+#menu{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	height: 59px;
+	background-color:#FCFDFD;
+	border-top: 1px solid rgba(5, 0, 0, .2);
+	border-bottom: 1px solid rgba(5, 0, 0, .2);
+	margin-top: 25px;
+    list-style-type: none;
+    padding-left: 0;
+    top: 0;
+    left: 0;
+}
+#menu li{
+    width: 150px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-align: center;
+}
+#menu li a:link, #menu li a:visited{
+    height: 1%;
+    color: black;
+    margin: 0;
+    padding: 4px 8px;
+    text-decoration: none;
+}
+#menu li a:hover {background-color:#A6A6A6;}
+#menu li a:active {background-color: #A6A6A6;}
+#menu .sousMenu{
+    display: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+#menu .sousMenu li{
+    width: 149px;
+}
+#menu .sousMenu li a:link, #menu .sousMenu li a:visited{
+    display: block;
+    color: black;
+    margin: 0;
+    border: 0;
+    text-decoration: none;
+}
+#menu .sousMenu li a:hover{
+    background-image: none;
+    background-color: #A6A6A6;
+}
+#menu li:hover > .sousMenu {display: block;}
 .greylight{
 	color:#A6A6A6;
 

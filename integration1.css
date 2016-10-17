@@ -14,7 +14,7 @@ body{
 }
 .header{
 	width: 1020px;
-	background-color: #502300;
+	background-color: black;
 }
 ul{
 	display: flex;
@@ -24,7 +24,7 @@ ul{
 	justify-content: center;
 	margin-top:0;
 	height: 60px;
-	background-color: #A6A6A6;
+	background-color: black;
 }
 ul li{
 	margin: 2%;
