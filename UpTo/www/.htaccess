@@ -1,0 +1,43 @@
+Options -Indexes
+ServerSignature Off
+
+# The following are performance optimizations and security enhancements for content that is served by your CMSMS installation.
+<IfModule mod_headers.c>
+        # Disable Last-Modified for performance
+        Header unset Last-Modified
+	# Disable ETags
+	Header unset ETag
+	FileEtag None
+	# For Security
+	Header set X-Frame-Options "SAMEORIGIN"
+</IfModule>
+
+# The following setups compression for content, if compression is enabled on the server.
+<IfModule deflate_module>
+	AddOutputFilterByType DEFLATE text/html text/css text/plain text/html text/xml image/gif image/jpeg image/png image/ico text/javascript application/x-javascript application/javascript application/json application/pdf
+</IfModule>
+
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresDefault "access plus 1 month"
+# Set expires tags on various file types... so that the browser wont attempt to reload them.
+ExpiresByType image/jpg "access plus 1 year"
+ExpiresByType image/gif "access plus 1 year"
+ExpiresByType image/ico "access plus 1 year"
+ExpiresByType image/png "access plus 1 year"
+ExpiresByType video/x-flv "access plus 1 year"
+ExpiresByType application/pdf "access plus 1 year"
+ExpiresByType application/x-shockwave-flash "access plus 1 year"
+ExpiresByType application/javascript "access plus 1 month"
+ExpiresByType application/x-javascript "access plus 1 month"
+ExpiresByType text/javascript "access plus 1 month"
+ExpiresByType text/css "access plus 1 month"
+	<IfModule mod_headers.c>
+		# Setting cache control to public allows proxy servers to cache the items too.
+		Header set Cache-Control "public"
+	</IfModule>
+</IfModule>
+
+RewriteEngine On
+Rewritecond %{HTTP_HOST} ^www.upto-numerique.fr$
+Rewriterule ^(.*) http://upto-numerique.fr/$1 [QSA,L,R=301]

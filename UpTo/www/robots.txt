@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /ajax/
+Disallow: /css/
+Disallow: /fonts/
+Disallow: /js/
+Disallow: /php/
+Disallow: .htaccess
+Disallow: /test/
+

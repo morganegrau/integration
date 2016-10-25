@@ -1,0 +1,1352 @@
+/* =================================================
+   Part 1 : Header
+   Part 2 : Slider
+   Part 3 : Bandeau candidater
+   Part 4 : Concept Up to
+   Part 5 : Langages
+   Part 6 : La promotion
+   Part 7 : Revue de presse
+   Part 8 : Partenaires
+   Part 9 : Contacts
+   Part 10 : Footer
+   Part 11 : Page Revue de presse
+   Part 12 : Page Promotion 2016
+   Part 13 : Page News
+   Part 14 : Social Network
+   Part 15 : Menu
+   Part 16 : Modal
+================================================= */
+
+@font-face {
+    font-family: 'DIN-Regular';
+    src: url('../fonts/din-webfont.eot');
+    src: url('../fonts/din-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/din-webfont.woff2') format('woff2'), url('../fonts/din-webfont.woff') format('woff'), url('../fonts/din-webfont.ttf') format('truetype'), url('../fonts/din-webfont.svg#webfontregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: "DIN-Regular", Helvetica, Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    color: rgb(185, 23, 122);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 25px;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* =================================================
+                     Styles css communs
+================================================= */
+
+section {
+    padding: 50px 0;
+}
+
+section h1 {
+    margin-top: 0;
+}
+
+.concept-upto h1,
+.promotion h1,
+.partner h1,
+.page-news h1,
+.page-news h2 {
+    color: rgb(159, 28, 106);
+}
+
+.langages h1,
+.presse h1,
+.contact h1 {
+    color: rgb(255, 255, 255);
+}
+
+
+/* bouton */
+
+.button {
+    margin-top: 60px;
+}
+
+.btn-default, .btn-default:hover  {
+    background-color: rgb(125, 28, 81);
+    color: rgb(255, 255, 255);
+    border: none;
+    box-shadow: 2px 2px 5px rgb(0, 0, 0);
+    font-size: 18px;
+    padding: 15px;
+}
+
+
+/* =================================================
+                     Part 1 : Header
+================================================= */
+
+.header {
+    padding: 15px 0;
+}
+
+.header h1 {
+    color: rgb(0, 169, 162);
+    font-weight: normal;
+    text-align: center;
+    margin: 0;
+}
+
+@media (max-width:449px) {
+    .header {
+        padding-bottom: 0;
+    }
+    .header h1 {
+        font-size: 1.5em;
+        margin: 10px 0;
+    }
+    header img {
+        max-width: 80%;
+    }
+}
+
+
+/* =================================================
+               Part 2 : Slider
+================================================= */
+
+.container_carousel {
+    width: 100% !important;
+}
+
+.container_carousel,
+.div_col {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.carousel-indicators li {
+    border: 1px solid rgb(0, 146, 146) !important;
+}
+
+.carousel-indicators .active {
+    background-color: rgb(0, 147, 147) !important;
+}
+
+/*.carousel-inner {
+    position: relative;
+}*/
+
+.item img {
+    /* 1300 x 340   (3/4)*/
+    width: 100%;
+    height: auto !important;
+}
+
+.carousel-caption h3 {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  text-align: left;
+  line-height: 35px !important;
+}
+
+.top {
+  margin-bottom: 5px !important;
+}
+
+.detail {
+  text-align: left;
+  margin-top: 0 !important;
+}
+
+.carousel-caption .savoirPlus {
+  background-color: rgba(125, 28, 81, .8);
+  float: right;
+  text-transform: none;
+  border-color: #7D1C51 !important;
+  padding: 6px 12px;
+}
+
+.carousel-caption .savoirPlus:visited, .carousel-caption .savoirPlus:hover {
+  background-color: rgb(125, 28, 81);
+  padding: 6px 12px;
+}
+
+.carousel-caption .backViolet {
+    background-color: rgb(125, 28, 81);
+    padding: 5px 20px;
+}
+
+.fa-chevron-left,
+.fa-chevron-right {
+    color: rgb(0, 146, 146);
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    display: inline-block;
+    font-size: 30px !important;
+}
+
+.item img {
+    /* 1300 x 340   (3/4)*/
+    width: 100%;
+    height: auto !important;
+    min-width: 975px !important;
+    /*margin-left: -350px;*/
+}
+
+/* Mini caption for portable */
+
+#carousel-minicaption {
+  text-align: center;
+}
+
+.carousel-portablecaption .description-minicaption {
+  min-height: 115px;
+}
+
+.carousel-portablecaption h3 {
+  margin: 0;
+  margin-top: 5px;
+}
+
+.carousel-portablecaption .backViolet {
+    color: rgb(125, 28, 81);
+    /*padding: 5px 20px;*/
+}
+
+.carousel-portablecaption .savoirPlus {
+  background-color: rgba(125, 28, 81, .8);
+  text-transform: none;
+  border-color: #7D1C51 !important;
+  margin-top: 5px;
+}
+
+.carousel-portablecaption .savoirPlus:visited,
+.carousel-portablecaption .savoirPlus:hover {
+  background-color: rgb(125, 28, 81);
+}
+
+@media (max-width: 800px) {
+
+    .carousel-caption .btn {
+        padding: 0;
+    }
+    .carousel-caption .savoirPlus {
+        display: none;
+    }
+}
+
+@media (max-width: 700px) {
+    .top {
+        margin-top: 10px;
+    }
+    .carousel-caption h3 {
+        font-size: 15px;
+    }
+    .carousel-caption .savoirPlus {
+        display: none;
+    }
+    .carousel-caption .btn {
+        padding: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .top {
+        margin-top: 10px;
+    }
+    .carousel-caption h3 {
+        font-size: 14px;
+    }
+    .carousel-caption .savoirPlus {
+        display: none;
+    }
+    .carousel-caption .btn {
+        padding: 0;
+    }
+}
+
+@media (max-width: 500px) {
+    .top {
+        padding-top: 20px;
+    }
+    .carousel-caption h3 {
+        font-size: 12px;
+        display: inline-block;
+    }
+    .carousel-caption .savoirPlus {
+        display: none;
+    }
+    .carousel-caption .btn {
+        padding: 0;
+    }
+
+    .carousel-portablecaption .description-minicaption {
+      min-height: 90px;
+    }
+}
+
+@media (max-width: 499px) {
+    .carousel-caption h3 {
+        font-size: 8px;
+        display: inline-block;
+    }
+    .carousel-caption .savoirPlus {
+        display: none;
+    }
+}
+
+@media (max-width: 400px) {
+    .carousel-portablecaption .description-minicaption {
+      min-height: 115px;
+    }
+}
+
+/* =================================================
+              Part 3 : Bandeau candidater
+================================================= */
+
+#candidater {
+  background-color: rgb(159, 28, 106);
+  width: 100%;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 15px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+}
+#candidater h2 {
+  margin-top: 10px;
+}
+#candidater .button {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#candidater a {
+  background-color: rgba(0, 158, 147, 0.7);
+}
+#candidater a:hover {
+  background-color: rgba(0, 158, 147, 0.9);
+}
+#candidater a:visited {
+  color: rgb(255, 255, 255);
+}
+
+/* =================================================
+              Part 4 : Concept Up To
+================================================= */
+
+.concept-upto {
+    max-width: 1000px;
+}
+
+.concept-upto h1,
+.concept-upto h2 {
+    text-align: center;
+}
+
+.concept-upto h2 {
+    font-weight: lighter;
+    margin: 20px 0;
+}
+
+.concept-upto h3 {
+    font-size: 17px;
+    margin: 0;
+    text-align: center;
+    color: #9F1C6A;
+    margin-top: 50px;
+}
+
+.icone {
+    margin: 0 auto 20px;
+}
+
+.gif {
+    width: 115px;
+    height: 115px;
+    margin: 0 auto;
+    display: block;
+    text-indent: -9999px;
+}
+
+#intense {
+    background-image: url("../img/concept/icones.png");
+    background-position: 0 -117px;
+}
+
+#intense:hover {
+    background-image: url("../img/concept/icones.png");
+    background-position: 118px -117px;
+}
+
+#gratuit {
+    background-image: url("../img/concept/icones.png");
+    background-position: -4px -723px;
+}
+
+#gratuit:hover {
+    background-image: url("../img/concept/icones.png");
+    background-position: 119px -723px;
+}
+
+#doing {
+    background-image: url("../img/concept/icones.png");
+    background-position: -2px -362px;
+}
+
+#doing:hover {
+    background-image: url("../img/concept/icones.png");
+    background-position: 115px -362px;
+}
+
+#competences {
+    background-image: url("../img/concept/icones.png");
+    background-position: -4px -237px;
+}
+
+#competences:hover {
+    background-image: url("../img/concept/icones.png");
+    background-position: 114px -237px;
+}
+
+#equipe {
+    background-image: url("../img/concept/icones.png");
+    background-position: -4px -601px;
+}
+
+#equipe:hover {
+    background-image: url("../img/concept/icones.png");
+    background-position: 114px -601px;
+}
+
+#entreprise {
+    background-image: url("../img/concept/icones.png");
+    background-position: -4px -483px;
+}
+
+#entreprise:hover {
+    background-image: url("../img/concept/icones.png");
+    background-position: 114px -484px;
+}
+
+#accompagnement {
+    background-image: url("../img/concept/icones.png");
+    background-position: -4px 0;
+}
+
+#accompagnement:hover {
+    background-image: url("../img/concept/icones.png");
+    background-position: 115px 0;
+}
+
+.modal-header h3 {
+    font-size: 18px;
+}
+
+@media (max-width: 767px) {
+    .imagelabel {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+
+
+/* =================================================
+                     Part 5 : Langages
+================================================= */
+
+.langages {
+    background: url(../img/bg-language.jpg) no-repeat 0 0;
+    background-attachment:fixed;
+    background-size: cover;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+
+/*TITRES*/
+
+.langages h2 {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.langages h3 {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.langages h4 {
+    font-size: 14px;
+}
+
+.langages p {
+    margin: 20px auto;
+    max-width: 500px;
+}
+
+
+/*FRAMEWORKS*/
+
+.frameworks {
+    margin-bottom: 25px;
+}
+
+.frameworks img {
+    width: 90px;
+}
+
+.icons_langages {
+    min-width: 90px;
+}
+
+#langages img {
+    width: 60px;
+}
+
+#langages {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+
+/*MEDIA QUERIES*/
+
+@media (max-width: 500px) {
+    .langages h1 {
+        font-size: 20px;
+    }
+    .langages h2 {
+        font-size: 16px;
+    }
+    .langages h4 {
+        font-size: 14px;
+    }
+    .langages h5 {
+        font-size: 12px;
+    }
+    .frameworks img,
+    .frameworks img:hover {
+        width: 75px;
+        margin: auto;
+    }
+    #langages img,
+    #langages img:hover {
+        width: 55px;
+    }
+    #langages {
+        -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+    }
+}
+
+/* =================================================
+                  Part 6 : La promotion
+================================================= */
+
+
+/* =================================================
+                  Part 7 : Revue de presse
+================================================= */
+
+.presse h1,
+.presse h2,
+.presse .col-lg-3 {
+  text-align: center;
+}
+
+
+.presse p {
+    text-align: left;
+}
+
+
+/* conteneur revue de presse */
+
+.presse {
+    background: url(../img/bg-revue-de-presse.jpg) no-repeat 0 0;
+    background-attachment: fixed;
+    background-size: cover;
+    color: rgb(255, 255, 255);
+}
+
+
+/* bloc 4 articles */
+
+.presse .row {
+    width: 80%;
+    margin: auto;
+}
+
+
+/* chaque article */
+
+.presse .col-lg-3 {
+    height: 250px;
+    border-right: 1px solid rgb(220, 220, 220);
+    margin-top: 50px;
+}
+
+
+/* chaque logo */
+
+.presse .imagePress {
+    margin-bottom: 30px;
+}
+
+
+/* 4eme article */
+
+.presse .quatrieme {
+    border: none;
+}
+
+
+/* lien lire la suite */
+
+.presse .lireSuite {
+    text-align: right;
+    margin-top: 40px;
+}
+
+.presse a {
+    color: rgb(255, 165, 85);
+    font-weight: bold;
+}
+
+.presse a:hover {
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(255, 130, 4);
+}
+
+.presse .button {
+  text-align: center;
+}
+
+.presse .button a {
+    background-color: rgba(164, 0, 95, .5);
+    color: rgb(255, 255, 255);
+    font-weight: normal;
+}
+
+
+/* RESPONSIVE STYLING */
+
+@media (max-width: 991px) {
+    .presse .row {
+        width: 80%;
+        margin: auto;
+    }
+}
+
+@media (max-width: 767px) {
+    .presse .deuxieme {
+        border: none;
+    }
+    .presse .troisieme {
+        /*display: none;*/
+    }
+    .presse .quatrieme {
+        /*display: none;*/
+    }
+}
+
+
+/* =================================================
+                  Part 8 : Partenaires
+================================================= */
+
+.partner {
+    max-width: 1000px;
+    margin: 0 auto 100px;
+    text-align: center;
+}
+
+.partner img {
+    width: 80%;
+}
+
+.partenaires_principaux {
+    padding: 50px 0;
+}
+
+.partenaires_principaux,
+.partenaires_secondaire {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+
+/****** medias queries ****/
+
+@media (min-width: 961px) {
+    .partenaires_principaux,
+    .partenaires_secondaire {
+        -webkit-flex-wrap: nowrap;
+            -ms-flex-wrap: nowrap;
+                flex-wrap: nowrap;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 960px) {
+    .partner img {
+        padding: 20px;
+    }
+}
+
+@media (min-width: 321px) and (max-width: 640px) {
+    .partner img {
+        display: block;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 320px) {
+    .partenaires_principaux,
+    .partenaires_secondaire {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+    .partner img {
+        display: block;
+        padding: 20px;
+        margin: 0 auto;
+    }
+}
+
+
+/* =================================================
+                     Part 9 : Contacts
+================================================= */
+
+.contact {
+    /*height: auto;*/
+    /*min-height: 500px;*/
+    background-color: rgb(0, 169, 162);
+    background-size: cover;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    position: relative;
+}
+
+.contact form {
+    text-align: left;
+}
+
+.contact p,
+.contact form {
+    padding-top: 25px;
+}
+
+.contact a {
+    color: rgb(255, 255, 255);
+}
+
+.contact textarea {
+    resize: none;
+}
+
+.contact button {
+    background-color: rgb(216, 16, 125);
+    color: rgb(255, 255, 255);
+}
+
+
+/* CONTACT FORM */
+
+.contact-content label {
+    color: rgb(0, 0, 0) !important;
+}
+
+.name-error,
+.name-feedback,
+.firstname-error,
+.firstname-feedback {
+    display: none;
+    text-align: center;
+}
+
+.email-error,
+.email-feedback,
+.subject-error,
+.subject-feedback,
+.message-error,
+.message-feedback,
+.captcha-error,
+.captcha-feedback,
+.form-error {
+    display: none;
+    text-align: center;
+}
+
+.feedback {
+    display: inline;
+}
+
+.error {
+    display: block;
+}
+
+.glyphicon-envelope {
+    margin-top: 40px;
+    font-size: 5em;
+}
+
+.green {
+    color: #009E93;
+}
+
+#submit:focus {
+    color: white;
+    text-decoration: none;
+    outline: none;
+}
+
+
+/* =================================================
+              Part 10 :  Footer
+================================================= */
+
+footer {
+    background-image: url('../img/bg-footer.jpg');
+    background-size: cover;
+    padding: 50px 0;
+}
+
+footer a,
+footer a:hover,
+footer a:visited {
+    color: rgb(151, 151, 151);
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.titreFooter {
+    text-transform: capitalize;
+    font-weight: normal;
+    font-size: 22px;
+    color: rgb(250, 250, 250);
+}
+
+.copyright {
+    color: rgb(250, 250, 250);
+}
+
+
+/* ================================================= */
+
+
+/*              Part 11 :  Page Revue de Presse
+================================================= */
+
+.pagePress h1,
+.pagePress h2 {
+    text-align: center;
+    color: #A4005F;
+}
+
+.pagePress hr {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 50%;
+    border-color: #aaa;
+}
+
+
+/* conteneur page presse */
+
+.pagePress {
+    font-family: 'din-regular', sans-serif;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    background: url(../img/bg-page-presse.jpg) no-repeat;
+    background-size: 100%;
+}
+
+
+/* titre */
+
+.pagePress h1 {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+
+/* sous-titre */
+
+.pagePress h2 {
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+
+/* lien lire la suite */
+
+.pagePress .lireSuite {
+    text-align: right;
+}
+
+.pagePress a {
+    color: #FFA555;
+    font-weight: bold;
+}
+
+.pagePress a:hover {
+    text-decoration: none;
+    font-weight: bold;
+    color: #FF8204;
+}
+
+
+/* article labellisation */
+
+.pagePress .labellisation {
+    margin-top: 50px;
+}
+
+
+/* chaque article */
+
+.pagePress .col-lg-8 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.pagePress .logo {
+    text-align: center;
+}
+
+.pagePress .col-lg-6 {
+    padding-top: 10px;
+}
+
+
+/* RESPONSIVE STYLING */
+
+@media (max-width: 1199px) {}
+
+@media (max-width: 991px) {
+    .pagePress hr {
+        width: 60%;
+    }
+}
+
+@media (max-width: 767px) {
+    .pagePress hr {
+        width: 70%;
+    }
+}
+
+
+/* =================================================
+              Part 12 : Page Promotion 2016
+================================================= */
+
+.page-promo h1 {
+    color: #00a895;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.page-promo .formateur,
+.page-promo h1 {
+    text-align: center;
+}
+
+.page-promo img {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.page-promo h2 {
+    color: rgb(0, 168, 149);
+    font-size: 20px;
+    margin-top: 2px;
+    margin-bottom: -8px;
+    text-transform: none;
+}
+
+.page-promo h3 {
+    color: rgb(200, 212, 210);
+    font-size: 18px;
+    text-transform: none;
+}
+
+.page-promo p {
+    margin-top: 22px;
+}
+.page-promo .sandrez {
+  margin-top: -7px;
+}
+.page-promo .parrainage img {
+    width: inherit;
+    margin: 0;
+}
+
+.page-promo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 15px;
+}
+
+.page-promo a:hover {
+    text-decoration: none;
+    color: rgb(159, 28, 106);
+}
+
+.page-promo .social {
+    padding: 8px 0;
+    background-color: rgb(200, 212, 210);
+}
+
+.page-promo .social:hover {
+    background-color: rgb(130, 187, 180);
+}
+
+.box {
+    position: relative;
+    width: 260px;
+    height: 570px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25), 0 0 50px rgba(0, 0, 0, 0.1) inset;
+    border-radius: 0% 0% 1% 0% / 0% 0% 20% 0%;
+    margin: 30px 11px;
+    text-align: center;
+    padding-right: 25px;
+}
+
+.box:before {
+    z-index: -1;
+    position: absolute;
+    content: "";
+    width: 98%;
+    height: 96%;
+    bottom: 0px;
+    right: 0px;
+    background: rgb(238, 238, 238);
+    border: 1px solid rgb(204, 204, 204);
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.1);
+    -webkit-transform: skew(2deg, 2deg) translate(3px, 8px);
+    transform: skew(2deg, 2deg) translate(3px, 8px);
+}
+
+.box:after {
+    z-index: -1;
+    position: absolute;
+    content: "";
+    width: 98%;
+    height: 96%;
+    bottom: 0px;
+    right: 0px;
+    background: rgb(238, 238, 238);
+    border: 1px solid rgb(204, 204, 204);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    -webkit-transform: skew(2deg, 2deg) translate(-1px, 2px);
+    transform: skew(2deg, 2deg) translate(-1px, 2px);
+}
+
+
+/* =================================================
+              Part 13 : Page News
+================================================= */
+
+
+/* conteneur page presse */
+
+.page-news {
+    background: url(../img/bg-page-presse.jpg) no-repeat;
+    background-size: 100%;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.page-news .container {
+    max-width: 800px;
+}
+
+.page-news hr {
+    margin: 30px auto;
+    max-width: 50%;
+    border-color: rgb(170, 170, 170);
+}
+
+
+/* Titre actu */
+
+.page-news h2 {
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.page-news a {
+    color: rgb(255, 165, 85);
+    font-weight: bold;
+}
+
+.page-news a:hover {
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(255, 130, 4);
+}
+
+.news p,
+.news ul {
+    text-align: left;
+}
+
+.image-news {
+    margin: 20px 0;
+}
+
+.bloc-temoignage {
+  margin: 30px 0;
+}
+
+.image-temoignage img {
+  border-radius: 50%;
+}
+
+.temoignage {
+  font-style: italic;
+}
+
+.french-south-digital {
+    margin-right: 10px;
+}
+
+
+/* article labellisation */
+
+.page-news .labellisation {
+    margin-top: 50px;
+}
+
+
+/* =================================================
+              Part 14 : Social Network
+================================================= */
+
+.social-network {
+    display: none;
+    position: fixed;
+    top: 55%;
+    right: 3%;
+    z-index: 1;
+    opacity: 0.6;
+}
+
+.social-network ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-network li {
+    padding: 10px 0;
+}
+
+.social-network a {
+    color: rgb(164, 0, 95);
+    font-size: 20px;
+    padding: 5px 8px;
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgb(164, 0, 95);
+    border-radius: 100%;
+    display: block;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    text-decoration: none;
+}
+
+.social-network a:hover {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+
+@media (max-height: 400px) {
+    .social-network {
+        top: 40%;
+    }
+}
+
+@media (max-height: 300px) {
+    .social-network {
+        top: 30%;
+    }
+}
+
+
+/* =================================================
+              Part 15 : Menu
+================================================= */
+
+#menu {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/bg-menu.jpg");
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: 100% 100%;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+                -ms-grid-row-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-flex-flow: column;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-align-content: space-around;
+        -ms-flex-line-pack: distribute;
+            align-content: space-around;
+    z-index: 9999;
+    margin: 0 auto;
+}
+
+#navicon {
+    z-index: 99999;
+    position: fixed;
+    top: 30px;
+    right: 40px;
+    opacity: 0.8;
+    cursor: pointer;
+    color: rgb(0, 169, 162);
+}
+
+#navicon:hover {
+    opacity: 1;
+}
+
+.navigation ul {
+    padding: 0;
+    margin: 50px auto 0;
+    text-align: center;
+}
+
+.navigation li {
+    list-style: none;
+}
+
+.navigation a {
+    text-transform: uppercase;
+    text-decoration: none;
+    display: block;
+    color: #3a3a3a;
+    margin: 2% 0px;
+    font-size: 38px;
+    letter-spacing: 1px;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+#menu a:hover {
+    color: #009A9A;
+    text-shadow: 0 0 0px rgba(0, 0, 0, 0.8);
+}
+
+#menu img {
+    height: 100px;
+}
+
+.arrow-right {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid green;
+}
+
+
+/*NAVICON*/
+
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+    cursor: pointer;
+    border-radius: 5px;
+    height: 5px;
+    width: 35px;
+    background: #3a3a3A;
+    position: absolute;
+    display: block;
+}
+
+.modal h1 {
+    text-align: center;
+    font-size: 20px;
+    color: #A4005F;
+}
+
+.close {
+    color: #009292 !important;
+    font-size: 35px;
+}
+
+@media (max-width: 991px) {
+    #menu {
+        background-image: url("../img/bg-menu-vertical.jpg");
+    }
+}
+
+@media (max-width: 767px) {
+    .modal {
+        top: 70px;
+    }
+}
